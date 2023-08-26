@@ -14,16 +14,27 @@ console.log(reverseApp(str));
 /* task _____________3 */
 let str2 = "1java2script3 5 deve6lo4per";
 
-function splitApp(str) {
+function splitApp(str, call) {
+    let resultNum = [];
+    let resultStr = [];
   for (let i = 0; i < str.length; i++) {
-    if (typeof(+str[i]) == "Number") {
-      console.log("bor");
-      console.log(str[i]);
+    if (
+      str[i] == 1 ||
+      str[i] == 2 ||
+      str[i] == 3 ||
+      str[i] == 5 ||
+      str[i] == 6 ||
+      str[i] == 4
+    ) {
+      resultNum.push(str[i]);
     } else {
-    //   console.log("yo'q");
-        console.log(+str[i]);
+      resultStr.push(str[i]);
     }
   }
+  return call(resultStr, resultNum);
 }
 
-splitApp(str2);
+splitApp(str2, (num, str) => {
+  console.log(num);
+  console.log(str);
+});
