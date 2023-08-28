@@ -38,3 +38,16 @@ splitApp(str2, (num, str) => {
   console.log(num);
   console.log(str);
 });
+
+
+let obj = {
+    name: "ism",
+    age: 16,
+    place: "lsdfjlskdfj",
+}
+
+function User(s, k) {
+    console.log(s , k);
+}
+
+User(obj)
